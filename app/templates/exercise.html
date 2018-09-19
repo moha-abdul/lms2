@@ -1,0 +1,12 @@
+<h1>quiz</h1>
+<form action='/quiz' method='POST'>
+    <ol>
+        {% for i in q %}
+            <li>What does the tag <u>{{i}}</u> do?</li>
+            {% for j in o[i] %}
+                <input type='radio' value='{{j}}' name='{{i}}' />{{j}}
+            {% endfor %}
+        {% endfor %}
+    </ol>
+    <input type="submit" value="submit" />
+</form>
